@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller App</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1><i class="fas fa-dice"></i> Dice Roller</h1>
+            <p class="subtitle">Roll your destiny!</p>
+        </header>
+
+        <main class="app-main">
+            <div class="card input-section">
+                <div class="input-group">
+                    <label for="sides">
+                        <i class="fas fa-shapes"></i> Number of Sides
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="number" id="sides" min="2" value="6">
+                        <span class="hint">Min: 2</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="count">
+                        <i class="fas fa-dice-d20"></i> Number of Dice
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="number" id="count" min="1" value="1">
+                        <span class="hint">Min: 1</span>
+                    </div>
+                </div>
+
+                <button id="roll-button" class="roll-btn">
+                    <i class="fas fa-dice"></i>
+                    <span>Roll Dice</span>
+                </button>
+            </div>
+
+            <div class="card result-section">
+                <h2><i class="fas fa-star"></i> Results</h2>
+                <div id="results" class="dice-grid"></div>
+                <div id="total" class="total-score"></div>
+            </div>
+        </main>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
